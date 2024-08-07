@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resultados de Búsqueda</title>
+</head>
+
+<body>
+    <h1>Resultados de Búsqueda para "{{ query }}"</h1>
+    {% if busqueda_realizada %}
+    <ul>
+        {% for producto in resultados %}
+        <li>{{ producto.nombre }} - {{ producto.comision }} - {{ producto.email }}</li>
+        {% empty %}
+        <li>No se encontraron productos.</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No se ha realizado una búsqueda.</p>
+    {% endif %}
+    <a href="{% url 'buscar_productos' %}">Nueva Búsqueda</a>
+</body>
+
+</html>

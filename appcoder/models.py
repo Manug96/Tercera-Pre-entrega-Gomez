@@ -6,7 +6,7 @@ from django.db import models
 class Productos(models.Model):
     nombre = models.CharField(max_length=30)
     comision = models.IntegerField()
-    email = models.EmailField(null=False)
+    email = models.EmailField(null=True)
 
     def __str__(self):
         return f"Nombre del Producto: {self.nombre}- Numero de comision:  {self.comision}- Email de contacto:{self.email}"

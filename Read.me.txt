@@ -1,0 +1,106 @@
+# Proyecto Blog con Django
+
+Este proyecto es una aplicación de blog creada con Django que incluye funcionalidades como la gestión de productos y formularios de búsqueda.
+
+## Requisitos
+
+- Python 3.x
+- Django 3.x (o la versión compatible con tu proyecto)
+
+## Instalación
+
+1. Clona el repositorio:
+    bash
+    git clone https://github.com/tu_usuario/tu_repositorio.git
+    
+
+2. Navega al directorio del proyecto:
+    bash
+    cd tu_repositorio
+    
+
+3. Crea y activa un entorno virtual:
+    bash
+    python -m venv env
+    source env/bin/activate  # En Windows usa env\Scripts\activate
+    
+
+4. Instala las dependencias:
+    bash
+    pip install -r requirements.txt
+    
+
+## Configuración
+
+1. Crea un archivo `.env` en el directorio raíz del proyecto y configura las variables necesarias, como la configuración de la base de datos, claves secretas, etc.
+
+2. Realiza las migraciones para crear las tablas en la base de datos:
+    bash
+    python manage.py migrate
+## Uso
+
+### Iniciar el servidor de desarrollo
+
+Para iniciar el servidor de desarrollo, ejecuta el siguiente comando:
+bash
+python manage.py runserver
+
+
+### Acceso a la aplicación
+
+- Inicio: `http://localhost:8000/`
+- Productos: `http://localhost:8000/productos/`
+- Historia: `http://localhost:8000/historia/`
+- Redes: `http://localhost:8000/redes/`
+
+## Estructura del Proyecto
+
+### Vistas (Views)
+
+- `inicio(request)`: Renderiza la página de inicio.
+- `productos(request)`: Renderiza la página de productos.
+- `historia(request)`: Renderiza la página de historia.
+- `redes(request)`: Renderiza la página de redes.
+- `ProductosFormulario(request)`: Maneja el formulario de productos y guarda los datos en la base de datos.
+- `form_con_api(request)`: Maneja el formulario de productos utilizando una API.
+- `buscar_productos(request)`: Maneja la búsqueda de productos y muestra los resultados.
+
+### Modelos (Models)
+
+- `Productos`: Modelo que representa un producto con los campos `nombre`, `comision` y `email`.
+
+### Formularios (Forms)
+
+- `ProductoFormulario`: Formulario para la creación de productos.
+- `SearchForm`: Formulario para la búsqueda de productos.
+
+### Plantillas (Templates)
+
+Las plantillas HTML se encuentran en el directorio `appcoder/templates/appcoder` y están estructuradas de la siguiente manera:
+
+- `inicio.html`: Plantilla para la página de inicio.
+- `productos.html`: Plantilla para la página de productos.
+- `historia.html`: Plantilla para la página de historia.
+- `redes.html`: Plantilla para la página de redes.
+- `ProductosFormulario.html`: Plantilla para el formulario de productos.
+- `form_con_api.html`: Plantilla para el formulario de productos con API.
+- `buscar_productos.html`: Plantilla para la página de búsqueda de productos.
+- `resultado_busqueda.html`: Plantilla para mostrar los resultados de la búsqueda de productos.
+
+## Contribuir
+
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza los cambios necesarios y haz commit (`git commit -m 'Añadir nueva funcionalidad'`).
+4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`).
+5. Crea un Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+
+
+Este README proporciona una guía completa sobre cómo configurar, usar y contribuir a tu proyecto Django. Asegúrate de adaptar los enlaces y las instrucciones según sea necesario para tu proyecto específico.
+
